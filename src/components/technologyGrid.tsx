@@ -13,41 +13,45 @@ interface Technology {
 
 interface TechnologyGridProps {
   technologies: Technology[];
+  stack: Technology[];
+  onAdd: (technology: Technology) => void;
 }
 
 function TechnologyGrid({
   technologies,
+  stack,
+  onAdd,
 }: TechnologyGridProps) {
   return (
-    <section id="technologies" className="bg-slate-50">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+    <section id="technologies">
+      {/* Section Heading */}
+      <div className="mb-8">
+        <p className="mb-2 font-semibold uppercase tracking-wider text-purple-600">
+          Explore
+        </p>
 
-        {/* Section Heading */}
-        <div className="mb-8 text-center">
-          <p className="mb-2 font-semibold uppercase tracking-wider text-purple-600">
-            Explore
-          </p>
+        <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
+          Technologies
+        </h2>
 
-          <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-            Technologies
-          </h2>
+        <p className="mt-3 max-w-2xl text-slate-600">
+          Explore modern technologies and choose the ones you
+          want to use in your development stack.
+        </p>
+      </div>
 
-          <p className="mx-auto mt-3 max-w-2xl text-slate-600">
-            Explore modern technologies and choose the ones you
-            want to use in your development stack.
-          </p>
-        </div>
-
-        {/* Technology Cards */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {technologies.map((technology) => (
-            <TechnologyCard
-              key={technology.id}
-              technology={technology}
-            />
-          ))}
-        </div>
-
+      {/* Cards */}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {technologies.map((technology) => (
+          <TechnologyCard
+            key={technology.id}
+            technology={technology}
+            isAdded={stack.some(
+              (item) => item.id === technology.id
+            )}
+            onAdd={onAdd}
+          />
+        ))}
       </div>
     </section>
   );
