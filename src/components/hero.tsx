@@ -1,9 +1,11 @@
+import heroImage from "../assets/banner-stack.png";
+
 function Hero() {
   return (
     <section className="bg-white">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-20 lg:grid-cols-2">
-
-        {/* Left Side */}
+        
+        {/* Left Content */}
         <div>
           <p className="mb-4 font-semibold text-purple-600">
             🚀 Build Your Perfect Tech Stack
@@ -12,10 +14,7 @@ function Hero() {
           <h1 className="text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
             Build Your
             <br />
-
-            <span className="brand-gradient">
-              Developer Stack
-            </span>
+            <span className="brand-gradient">Developer Stack</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
@@ -24,7 +23,6 @@ function Hero() {
             amazing project.
           </p>
 
-          {/* Buttons */}
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#technologies"
@@ -42,48 +40,13 @@ function Hero() {
           </div>
         </div>
 
-        {/* Right Side */}
+        {/* Hero Image */}
         <div className="flex justify-center">
-          <div className="w-full max-w-lg rounded-3xl bg-slate-900 p-6 shadow-2xl">
-
-            {/* Fake browser top */}
-            <div className="mb-6 flex gap-2">
-              <div className="h-3 w-3 rounded-full bg-red-400"></div>
-              <div className="h-3 w-3 rounded-full bg-yellow-400"></div>
-              <div className="h-3 w-3 rounded-full bg-green-400"></div>
-            </div>
-
-            {/* Code */}
-            <div className="font-mono text-sm leading-8 text-slate-300">
-              <p>
-                <span className="text-purple-400">const</span>{" "}
-                myStack = [
-              </p>
-
-              <p className="pl-6 text-orange-300">
-                "React",
-              </p>
-
-              <p className="pl-6 text-cyan-300">
-                "Node.js",
-              </p>
-
-              <p className="pl-6 text-green-300">
-                "MongoDB",
-              </p>
-
-              <p className="pl-6 text-pink-300">
-                "Tailwind CSS"
-              </p>
-
-              <p>];</p>
-
-              <p className="mt-4 text-slate-500">
-                // Ready to build 🚀
-              </p>
-            </div>
-
-          </div>
+          <img
+            src={heroImage}
+            alt="Dev Stack"
+            className="w-full max-w-xl rounded-3xl object-cover shadow-2xl"
+          />
         </div>
 
       </div>

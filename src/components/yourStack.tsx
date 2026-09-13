@@ -31,8 +31,8 @@ function YourStack({
           </h2>
 
           <p className="mt-1 text-sm text-slate-500">
-            {stack.length} Technology
-            {stack.length !== 1 ? "ies" : ""} Selected
+            {stack.length}{" "}
+{stack.length === 1 ? "Technology" : "Technologies"} Selected
           </p>
         </div>
       </div>

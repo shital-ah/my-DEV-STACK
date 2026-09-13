@@ -8,6 +8,7 @@ import YourStack from "./components/yourStack";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./components/footer";
 
 
 interface Technology {
@@ -117,6 +118,7 @@ const removeAll = () => {
 </div>
         )}
       </main>
+      <Footer />
 
       <ToastContainer position="top-right"/>
 
