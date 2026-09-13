@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --brand-gradient: linear-gradient(90deg,
+      #ff7a18,
+      #ff3d81,
+      #7c3aed);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #111827;
+}
+
+.brand-gradient {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg {
+  background: var(--brand-gradient);}
